@@ -18,7 +18,7 @@ using System.Windows.Forms;
 namespace ArenaFighters
 {
   [DesignerGenerated]
-  public sealed class About : Form
+  public class About : Form
   {
     [AccessedThroughProperty("TableLayoutPanel")]
     private TableLayoutPanel _TableLayoutPanel;

@@ -252,7 +252,7 @@ namespace ArenaFighters
       }
     }
 
-    private virtual NotifyIcon ni
+    internal virtual NotifyIcon ni
     {
       [DebuggerNonUserCode] get => this._ni;
       [DebuggerNonUserCode, MethodImpl(MethodImplOptions.Synchronized)] set => this._ni = value;

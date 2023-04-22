@@ -321,22 +321,17 @@ namespace ArenaFighters.My
         else
           MyProject.MyForms.m_FormBeingCreated = new Hashtable();
         MyProject.MyForms.m_FormBeingCreated.Add((object) typeof (T), (object) null);
+        var filter = new Func<TargetInvocationException, bool>((TargetInvocationException ex) =>
+        {
+          // ISSUE: unable to correctly present filter
+          ProjectData.SetProjectError((Exception) ex);
+          return ex.InnerException != null;
+        });
         try
         {
           return new T();
         }
-        catch (TargetInvocationException ex) when (
-        {
-          // ISSUE: unable to correctly present filter
-          ProjectData.SetProjectError((Exception) ex);
-          if (ex.InnerException != null)
-          {
-            SuccessfulFiltering;
-          }
-          else
-            throw;
-        }
-        )
+        catch (TargetInvocationException ex) when (filter(ex))
         {
           throw new InvalidOperationException(Utils.GetResourceString("WinForms_SeeInnerException", ex.InnerException.Message), ex.InnerException);
         }
@@ -409,6 +404,9 @@ namespace ArenaFighters.My
     [ComVisible(false)]
     internal sealed class ThreadSafeObjectProvider<T> where T : new()
     {
+      [ThreadStatic, CompilerGenerated]
+      private static T m_ThreadStaticValue;
+      
       internal T GetInstance
       {
         [DebuggerHidden] get
