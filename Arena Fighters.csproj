@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\magni\Desktop\AF\Arena Fighters\Arena Fighters.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEFC49BB-577F-4226-96B4-4C6456928885}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Arena Fighters</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>ArenaFighters</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs" />
+    <Compile Include="Arena.cs" />
+    <Compile Include="Caught.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Difficulty.cs" />
+    <Compile Include="Exit_Menu.cs" />
+    <Compile Include="Forfeit.cs" />
+    <Compile Include="Form1.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Lose.cs" />
+    <Compile Include="Market.cs" />
+    <Compile Include="Outside.cs" />
+    <Compile Include="Win_easy.cs" />
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="My\MySettings.cs" />
+    <Compile Include="My\MySettingsProperty.cs" />
+    <Compile Include="My\Resources\Resources.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DBPB11" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx" />
+    <EmbeddedResource Include="Arena.resx" />
+    <EmbeddedResource Include="Caught.resx" />
+    <EmbeddedResource Include="Data.resx" />
+    <EmbeddedResource Include="Difficulty.resx" />
+    <EmbeddedResource Include="Exit_Menu.resx" />
+    <EmbeddedResource Include="Forfeit.resx" />
+    <EmbeddedResource Include="Form1.resx" />
+    <EmbeddedResource Include="Inventory.resx" />
+    <EmbeddedResource Include="Lose.resx" />
+    <EmbeddedResource Include="Market.resx" />
+    <EmbeddedResource Include="Outside.resx" />
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="Win_easy.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
